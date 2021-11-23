@@ -1,5 +1,5 @@
 const main = async () => {
-  const nftContractFactory = await hre.ethers.getContractFactory("MyNFT");
+  const nftContractFactory = await hre.ethers.getContractFactory("GenerativeCocktail");
   const nftContract = await nftContractFactory.deploy();
   await nftContract.deployed();
   console.log("Contract deployed to: ", nftContract.address);
@@ -8,9 +8,9 @@ const main = async () => {
   await txn.wait();
   console.log("Minted NFT #1");
 
-  txn = await nftContract.mintNFT();
-  await txn.wait();
-  console.log("Minted NFT #2");
+  // txn = await nftContract.mintNFT();
+  // await txn.wait();
+  // console.log("Minted NFT #2");
 };
 
 const runMain = async () => {
