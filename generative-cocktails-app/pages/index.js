@@ -15,7 +15,6 @@ const Home = () => {
   const [numberNFTsMinted, setNumberNFTsMinted] = useState(0);
 
   const checkWalletConnection = async () => {
-    
     const { ethereum } = window;
 
     if (!ethereum) {
@@ -52,7 +51,6 @@ const Home = () => {
 
       console.log("Connected", accounts[0]);
       setCurrentAccount(accounts[0]);
-
     } catch (err) {
       console.log(err);
     }
@@ -177,7 +175,7 @@ const Home = () => {
       <div
         css={css`
           width: fit-content;
-          margin: auto;
+          margin: 50px auto;
           padding: 20px;
         `}
       >
@@ -191,6 +189,24 @@ const Home = () => {
         `}
       >
         {numberNFTsMinted} / 8,888 minted
+      </div>
+      <div
+        css={css`
+          width: fit-content;
+          margin: auto;
+          padding: 20px;
+          color: white;
+        `}
+      >
+        <a
+          css={css`
+            color: inherit;
+          `}
+          href="https://testnets.opensea.io/collection/generative-cocktails-fx7oeunin7"
+          target="_blank"
+        >
+          view collection on OpenSea
+        </a>
       </div>
     </MainContainer>
   );

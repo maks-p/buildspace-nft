@@ -2,7 +2,7 @@
 import { css } from "@emotion/react";
 
 const style = css`
-    margin: 50px;
+    margin: 100px 50px;
 `;
 
 const Container = ({ children }) => {
